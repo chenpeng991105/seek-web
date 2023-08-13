@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "分类详情",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "../../components/nav-bar/nav-bar",
+    "coach-info": "../../components/coach-info/coach-info"
+  }
+}

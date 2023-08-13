@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "seek-popup": "../../components/seek-popup/seek-popup",
+    "share-popup": "../../components/share-popup/share-popup"
+  }
+}

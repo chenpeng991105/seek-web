@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "产品反馈",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "../../components/nav-bar/nav-bar"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "登录",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "icon-check": "../../components/icon-check/icon-check"
+  }
+}

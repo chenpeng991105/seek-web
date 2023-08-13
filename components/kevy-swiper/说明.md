@@ -1,0 +1,175 @@
+# kevy-swiper
+
+[========]
+
+### **开源不易，各位大侠，若本插件真的对您有所帮助，还请赏个好评 ~.~ 赞赏支持一下哦**
+
+[========]
+#### 介绍
+**高度自定义**的轮播图插件，最多只显示3个，其余在循环切换时显示，**具有3d切换效果**，支持自动播放和设置时间间隔，切换后返回当前下标，默认监听左右滑动进行切换，想要上下滑动的话可以在插件里上下滑动的事件里写自己的逻辑。
+- **符合easycom规范，使用简便**
+- **插件含全部源码，给你无限可能自定义你的功能**
+
+
+#### 软件架构
+uniapp框架插件，欢迎下载使用。
+
+
+#### 方法和属性
+
+| 名称     |    类型 |     默认值    |  描述    |
+| -------  | -------    |------ |------
+|   list     |      Array  | []  |swiper列表，内部结构为Object或String，示例{"imgUrl":"imgurl" ,"imgDesc":"我是描述文字"}或"imgurl"，详见list字段说明|
+|   showNum     |   Number | 3  |显示图片个数，仅支持3或5，若list的长度小于5会被强制设为3|
+|   width    |      Number | 100% |swiper的宽度，单位rpx|
+|   height   |      Number | 690rpx |swiper的高度，单位rpx|
+|   click    |      Event |  |点击当前item事件，返回点击item对应下标|
+|   change   |     Event |  |切换后change事件，返回当前中间位置item对应下标|
+|   autoPlay |     Boolean | false |是否自动播放，true自动播放|
+|   autoPlayInterval | Number  | 5000  |自动播放时间间隔，autoPlay为true时生效，单位毫秒|
+|   showDot | Boolean  |  false | 是否显示轮播指示点 |
+|   descAniType | String  |  slideFromRight | 图片描述文字动画类型：支持slideFromRight、slideFromBottom、scaleX、scaleY |
+|   dotColor | String  |  linear-gradient(to bottom, #999999, #c0c0c0) | 指示点未选中背景色，支持css颜色值及渐变 |
+|   dotSelectedColor | String  |  linear-gradient(to bottom, #92ffc0, #002661) | 指示点选中背景色，支持css颜色值及渐变 |
+
+#### list字段说明：其内部结构若为**Object**类型，属性值说明如下：
+| 名称  | 类型  | 描述  |
+| ------------ | ------------ |------------ |
+| imgUrl  |  String | 图片url |
+| imgDesc  |  String | 图片描述，非必填，不填时不显示描述文字 |
+
+详见下方readme示例
+
+
+#### list字段说明：其内部结构若为**String**类型，属性值说明如下：
+| 名称  | 类型  | 描述  |
+| ------------ | ------------ |------------ |
+| imgUrl  |  String | 图片url |
+
+详见下方readme示例
+
+
+#### 使用说明（图片+文字）
+```html
+<template>
+	<view class="t-content">
+		<kevy-swiper v-if="list && list.length>0" @click="swClick" @change="swChange" :autoPlay="true"
+			:autoPlayInterval="5000" :list="list" :height="500" :showNum="5" :showDot="true" descAniType="slideFromRight" dotColor="linear-gradient(to bottom, #999999, #c0c0c0)" dotSelectedColor="linear-gradient(to bottom, #92ffc0, #002661)" />
+	</view>
+</template>
+<script>
+	import kevySwiper from '@/components/kevy-swiper/kevy-swiper'
+	export default {
+		components: {
+			kevySwiper
+		},
+		data() {
+			return {
+				//图片url列表，内部结构为Object或String，示例{"imgUrl":"http://www.abc.com/a.jpg","imgDesc":"我是描述文字"}或"http://www.abc.com/a.jpg"
+				list: [],
+			}
+		},
+		onLoad() {
+			//请求数据
+			//这里模拟请求到了这个list
+			let list = [{
+					imgUrl: 'https://www.changan.com.cn/uploads/chan_newsthumb/330513479a6459781f00398815b9906a.jpg',
+					imgDesc: '我是第一个图片的说明文字'
+				},
+				{
+					imgUrl: 'https://www.changan.com.cn/uploads/chan_newsthumb/e1b488d041b576ba6ce1cc20a6cb81a3.jpg',
+					imgDesc: '我是第二个图片的说明文字'
+				},
+				{
+					imgUrl: 'https://www.changan.com.cn/uploads/chan_newsthumb/40e7cb2bf37e1123b5e4547b094192c3.jpg',
+					imgDesc: '我是第三个图片的说明文字'
+				},
+				{
+					imgUrl: 'https://www.changan.com.cn/uploads/chan_newsthumb/f60d441c589563b0ece918853194f6e9.jpg',
+					imgDesc: '我是第四个图片的说明文字'
+				},
+				{
+					imgUrl: 'https://www.changan.com.cn/uploads/chan_newsthumb/cd4353d0d1322c6f085b1bb0ecf2c835.jpg',
+					imgDesc: '我是第五个图片的说明文字'
+				},
+				{
+					imgUrl: 'https://www.changan.com.cn/cars_m/UNI-V/images/meitu/1.jpg',
+					imgDesc: '我是第六个图片的说明文字'
+				}
+			];
+			this.list = list;
+		},
+		methods: {
+			//当点击图片时返回图片下标，用于跳转之类业务
+			swClick(idx) {
+				console.log("当前点击的图片下标为：" + idx)
+			},
+			//当切换后返回当前下标
+			swChange(idx) {
+				console.log("当前中间图片的下标为：" + idx)
+			}
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	.t-content {
+		background-color: #f7f7f7;
+		min-height: 100vh;
+	}
+</style>
+```
+
+#### 使用说明（仅图片）
+```html
+<template>
+	<view class="t-content">
+		<kevy-swiper v-if="list && list.length>0" @click="swClick" @change="swChange" :autoPlay="true"
+			:autoPlayInterval="5000" :list="list" :height="500" :showNum="5" :showDot="true" descAniType="slideFromRight" dotColor="linear-gradient(to bottom, #999999, #c0c0c0)" dotSelectedColor="linear-gradient(to bottom, #92ffc0, #002661)" />
+	</view>
+</template>
+<script>
+	import kevySwiper from '@/components/kevy-swiper/kevy-swiper'
+	export default {
+		components: {
+			kevySwiper
+		},
+		data() {
+			return {
+				//图片url列表，内部结构为Object或String，示例{"imgUrl":"http://www.abc.com/a.jpg","imgDesc":"我是描述文字"}或"http://www.abc.com/a.jpg"
+				list: [],
+			}
+		},
+		onLoad() {
+			//请求数据
+			//这里模拟请求到了这个list
+			let list = [
+				"https://www.changan.com.cn/uploads/chan_newsthumb/330513479a6459781f00398815b9906a.jpg",
+				"https://www.changan.com.cn/uploads/chan_newsthumb/e1b488d041b576ba6ce1cc20a6cb81a3.jpg",
+				"https://www.changan.com.cn/uploads/chan_newsthumb/40e7cb2bf37e1123b5e4547b094192c3.jpg",
+				"https://www.changan.com.cn/uploads/chan_newsthumb/f60d441c589563b0ece918853194f6e9.jpg",
+				"https://www.changan.com.cn/uploads/chan_newsthumb/cd4353d0d1322c6f085b1bb0ecf2c835.jpg",
+				"https://www.changan.com.cn/cars_m/UNI-V/images/meitu/1.jpg"
+			];
+			this.list = list;
+		},
+		methods: {
+			//当点击图片时返回图片下标，用于跳转之类业务
+			swClick(idx) {
+				console.log("当前点击的图片下标为：" + idx)
+			},
+			//当切换后返回当前下标
+			swChange(idx) {
+				console.log("当前中间图片的下标为：" + idx)
+			}
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	.t-content {
+		background-color: #f7f7f7;
+		min-height: 100vh;
+	}
+</style>
+```

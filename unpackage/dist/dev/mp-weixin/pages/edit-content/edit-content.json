@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "编辑内容",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "../../components/nav-bar/nav-bar"
+  }
+}

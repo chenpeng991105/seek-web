@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的关注",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "../../components/nav-bar/nav-bar",
+    "coach-info": "../../components/coach-info/coach-info"
+  }
+}

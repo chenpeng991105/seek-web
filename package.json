@@ -1,0 +1,19 @@
+{
+    "id": "kevy-swiper",
+    "name": "个性自定义3d轮播图，拥有丰富的API属性及事件设置",
+    "displayName": "个性自定义3d轮播图，拥有丰富的API属性及事件设置",
+    "version": "2.0.3",
+    "description": "轮播图插件，显示3个或5个，循环切换，具有3d样式效果，支持自动播放设置时间间隔，支持click事件和change事件",
+    "keywords": [
+        "轮播",
+        "轮播图",
+        "3d",
+        "swiper"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/ai/ai",
+    "pages/message-user/message-user",
+    "pages/question/question",
+    "pages/message/message",
+    "pages/message-coach/message-coach",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/ai-question/ai-question",
+    "pages/task/task",
+    "pages/search/search",
+    "pages/category-detail/category-detail",
+    "pages/coach-detail/coach-detail",
+    "pages/product-feedback/product-feedback",
+    "pages/complaint/complaint",
+    "pages/mine-save/mine-save",
+    "pages/save-detail/save-detail",
+    "pages/mine-follow/mine-follow",
+    "pages/mine-order/mine-order",
+    "pages/edit-content/edit-content",
+    "pages/upload-images/upload-images",
+    "pages/coach-settings/coach-settings",
+    "pages/mine-income/mine-income",
+    "pages/edit-homepage/edit-homepage",
+    "pages/contact-us/contact-us"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#EEF0F4",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#8B8B8B",
+    "selectedColor": "#40457F",
+    "backgroundColor": "#EEF0F4",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/ai/ai",
+        "iconPath": "static/icon_ai.png",
+        "selectedIconPath": "static/icon_ai_selected.png",
+        "text": "AI互动"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "iconPath": "static/icon_question.png",
+        "selectedIconPath": "static/icon_question_selected.png",
+        "text": "在线问答"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "static/icon_message.png",
+        "selectedIconPath": "static/icon_message_selected.png",
+        "text": "消息列表"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/icon_mine.png",
+        "selectedIconPath": "static/icon_mine_selected.png",
+        "text": "我的健身"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

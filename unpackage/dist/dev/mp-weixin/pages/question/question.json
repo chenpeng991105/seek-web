@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "在线问答",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "../../components/nav-bar/nav-bar",
+    "icon-check": "../../components/icon-check/icon-check",
+    "coach-info": "../../components/coach-info/coach-info"
+  }
+}

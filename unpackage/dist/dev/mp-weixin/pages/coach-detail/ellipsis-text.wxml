@@ -1,0 +1,1 @@
+<view class="{{['ellipsis-text', 'data-v-11cf254d', f && 'hidden']}}"><label class="data-v-11cf254d" id="{{a}}"><slot></slot></label><view hidden="{{!b}}" class="btn-expand data-v-11cf254d" bindtap="{{c}}"><label class="ellipsis data-v-11cf254d">...</label> 展开 </view><view hidden="{{!d}}" class="btn-close data-v-11cf254d" bindtap="{{e}}">收起</view></view>

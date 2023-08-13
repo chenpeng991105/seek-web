@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "消息详情（用户）",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "../../components/nav-bar/nav-bar",
+    "countdown-timer": "../../components/countdown-timer/countdown-timer",
+    "chat-message": "../../components/chat-message/chat-message",
+    "share-popup": "../../components/share-popup/share-popup"
+  }
+}

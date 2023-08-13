@@ -1,0 +1,1 @@
+<view class="page-container1 data-v-1cef701d"><nav-bar wx:if="{{a}}" class="data-v-1cef701d" u-i="1cef701d-0" bind:__l="__l" u-p="{{a}}"></nav-bar><view class="tips data-v-1cef701d">提交后您将获得XX奖品，您的反馈是我们前进的动力和方向</view></view>
